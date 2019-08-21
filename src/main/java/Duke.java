@@ -16,8 +16,8 @@ public class Duke {
             }
             else {
                 System.out.println("     " + statement);
-                statement = input.nextLine();
             }
+            statement = input.nextLine();
         }
     }
 }
