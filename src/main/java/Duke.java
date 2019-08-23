@@ -7,7 +7,7 @@ public class Duke {
         System.out.println("     What can I do for you?");
 
         Scanner input = new Scanner(System.in);
-        String statement = input.nextLine(); //input a string
+        String statement = input.nextLine();
 
         while (!statement.equals("")) {
             if(statement.equals("bye")) {
