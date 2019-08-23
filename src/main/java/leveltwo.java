@@ -9,7 +9,7 @@ public class leveltwo {
         int position = 0;
 
         Scanner input = new Scanner(System.in);
-        String statement = input.nextLine(); //read an input
+        String statement = input.nextLine();
 
         while (!statement.equals("")) {
             int list_number = 1;
