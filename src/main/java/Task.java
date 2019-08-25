@@ -8,11 +8,11 @@ public class Task {
     }
 
     public String getStatusIcon() {
-        return this.isDone ? "✓" : "✘";
+        return (isDone ? "\u2713" : "\u2718");
     }
 
     public void markasDone() {
-        if (this.getStatusIcon().equals("✘")) {
+        if (this.getStatusIcon().equals("\u2718")) {
             this.isDone = true;
         }
 
