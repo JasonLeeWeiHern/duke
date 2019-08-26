@@ -13,10 +13,7 @@ public class Task {
     }
 
     public void markasDone() {
-        if (this.getStatusIcon().equals("\u2718")) {
             this.isDone = true;
-        }
-
     }
 
     public String getDescription() {
