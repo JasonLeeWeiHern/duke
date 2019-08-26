@@ -7,7 +7,6 @@ public class Task {
         this.isDone = false;
     }
 
-
     public String getStatusIcon() {
         return (isDone ? "\u2713" : "\u2718");
     }
@@ -15,7 +14,7 @@ public class Task {
     public void markasDone() {
             this.isDone = true;
     }
-
+    
     public String getDescription() {
         return this.description;
     }

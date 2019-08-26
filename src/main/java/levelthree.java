@@ -26,7 +26,7 @@ public class levelthree {
             else if(statement.equals("list")) {
                 System.out.println("     Here are the tasks in your list:");
                 for(int i = 0; i < position; i++) {
-                    System.out.println("     " + list_number + ". " + "[" + arr.get(i).getStatusIcon() + "] " + arr.get(i).getDescription());
+                    System.out.println("     " + list_number + "." + "[" + arr.get(i).getStatusIcon() + "] " + arr.get(i).getDescription());
                     list_number++;
                 }
             }
