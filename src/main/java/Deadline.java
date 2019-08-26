@@ -11,4 +11,5 @@ public class Deadline extends Task {
     public String getDescription() {
         return "[D]" + super.getDescription() + "(by:" + by + ")";
     }
+    //Overide the get description method in Task
 }

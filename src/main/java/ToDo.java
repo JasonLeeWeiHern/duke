@@ -6,5 +6,5 @@ public class ToDo extends Task {
     @Override
     public String getDescription() {
         return "[T]" + super.getDescription();
-    }
+    } //Overide the get description method in Task
 }
