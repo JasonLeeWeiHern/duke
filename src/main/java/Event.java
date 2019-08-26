@@ -9,5 +9,5 @@ public class Event extends Task {
     @Override
     public String getDescription() {
         return "[E]" + super.getDescription() + "(at:" + at + ")";
-    }//Overide the get description method in Task
+    }
 }

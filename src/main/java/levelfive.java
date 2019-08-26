@@ -39,7 +39,6 @@ public class levelfive {
                 arr.get(num_to_tick).markasDone();
                 System.out.println("  [" + arr.get(num_to_tick).getStatusIcon() + "] " + arr.get(num_to_tick).getDescription());
             }
-
             else if (splitString[0].equals("todo")) {
                 if(splitString.length == 1) {
                     System.out.println("     ☹ OOPS!!! The description of a todo cannot be empty.");

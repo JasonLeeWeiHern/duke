@@ -18,5 +18,4 @@ public class Task {
     public String getDescription() {
         return getStatusIcon() + " " + this.description;
     }
-    //print out status plus the string input
 }
