@@ -14,8 +14,8 @@ public class Task {
     public void markasDone() {
             this.isDone = true;
     }
-    
+
     public String getDescription() {
-        return this.description;
+        return getStatusIcon() + " " + this.description;
     }
 }
