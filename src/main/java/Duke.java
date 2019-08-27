@@ -42,7 +42,6 @@ public class Duke {
                 System.out.println("\tBye. Hope to see you again soon!");
                 break;
             }
-
             else if(statement.equals("list")) {
                 System.out.println("\tHere are the tasks in your list:");
                 for(int i = 0; i < arr.size(); i++) {
