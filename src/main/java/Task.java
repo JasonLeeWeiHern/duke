@@ -16,6 +16,6 @@ public class Task {
     }
 
     public String getDescription() {
-        return getStatusIcon() + " " + this.description;
+        return this.description;
     }
 }
