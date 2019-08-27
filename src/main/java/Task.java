@@ -11,11 +11,13 @@ public class Task {
         return (isDone ? "\u2713" : "\u2718");
     }
 
+    public String getStatusIcon2() { return (isDone? "1" : "0");}
+
     public void markasDone() {
-            this.isDone = true;
+        this.isDone = true;
     }
 
     public String getDescription() {
-        return this.description;
+        return "[" + getStatusIcon() + "] " + this.description;
     }
 }
