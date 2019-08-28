@@ -1,12 +1,10 @@
 public class Task {
     protected String description;
     protected boolean isDone;
-
     public Task(String var1) {
         this.description = var1;
         this.isDone = false;
     }
-
     public String getStatusIcon() {
         return (isDone ? "\u2713" : "\u2718");
     }
@@ -18,6 +16,6 @@ public class Task {
     }
 
     public String getDescription() {
-        return "[" + getStatusIcon() + "] " + this.description;
+        return "[" + this.getStatusIcon() + "] " + this.description;
     }
 }
