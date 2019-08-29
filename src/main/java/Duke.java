@@ -10,14 +10,20 @@ public class Duke {
         Storage save = new Storage(arr);
         int position = 0; //Index in the ArrayList
 
+
+
         Scanner input = new Scanner(System.in);
 
         while (true) {
+            String agenda = "";
             String statement;
+            String time = ""; //for the date and time
             String[] splitString;
+            ChangeDateFormat cdf = new ChangeDateFormat(time);
             while(true) {
                 statement = input.nextLine(); //read an input
                 Task newTask = new Task(statement); //assign the statement to the task
+
                 splitString = statement.split(" ");//split the string into individual words
                 try {
                     if(statement.equals("todo") || statement.equals("deadline") || statement.equals("event")) {
@@ -35,8 +41,6 @@ public class Duke {
                     System.out.println(e.getMessage());
                 }
             }
-            String agenda = "";
-            String time = ""; //for the date and time
             int list_number = 1;
             if(statement.equals("bye")) {
                 System.out.println("\tBye. Hope to see you again soon!");
@@ -81,7 +85,7 @@ public class Duke {
                             break;
                         }
                     }
-                    Deadline newDeadline = new Deadline(agenda, time);
+                    Deadline newDeadline = new Deadline(agenda, cdf.NewFormat(time));
                     arr.add(newDeadline);
                     save.SaveTxtFile(arr);
                     System.out.println("\tGot it. I've added this task:");
@@ -100,7 +104,7 @@ public class Duke {
                         break;
                     }
                 }
-                Event newEvent = new Event(agenda, time);
+                Event newEvent = new Event(agenda, cdf.NewFormat(time));
                 arr.add(newEvent);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
