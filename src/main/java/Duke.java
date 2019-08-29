@@ -8,7 +8,6 @@ public class Duke {
 
         Scanner input = new Scanner(System.in);
         String statement = input.nextLine(); //input a string
-
         while (!statement.equals("")) {
             if(statement.equals("bye")) {
                 System.out.println("     Bye. Hope to see you again soon!");
