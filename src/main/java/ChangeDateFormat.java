@@ -17,7 +17,6 @@ public class ChangeDateFormat {
         String yyyy = temp[0];
         String time = temp[1];
 
-        System.out.println(dd);
 
         if (dd.equals(" 1") || dd.equals(" 21") || dd.equals(" 31")) {
             dd = dd.concat("st");
@@ -85,7 +84,6 @@ public class ChangeDateFormat {
             time = 12 + "am";
         }
         else if(int_time > 1200) {
-            System.out.println(int_time);
             hour = (int_time - 1200)/100;
             minutes = (int_time-1200) - (hour*100);
             if(minutes == 0) {

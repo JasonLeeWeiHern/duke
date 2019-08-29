@@ -60,7 +60,6 @@ public class Duke {
                 System.out.println("\t  " + arr.get(num_to_tick).getDescription());
                 save.SaveTxtFile(arr);
             }
-
             else if (splitString[0].equals("todo")) {
                 for (int i = 1; i < splitString.length; i++) {
                     agenda += splitString[i] + " ";
