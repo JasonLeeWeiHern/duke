@@ -53,7 +53,6 @@ public class Duke {
                     list_number++;
                 }
             }
-
             else if(splitString[0].equals("done")) {
                 System.out.println("\tNice! I've marked this task as done:");
                 int num_to_tick = Integer.parseInt(splitString[1]) - 1; //convert the string to number
