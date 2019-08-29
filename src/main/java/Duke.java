@@ -7,7 +7,6 @@ public class Duke {
         System.out.println("\tWhat can I do for you?");
 
         ArrayList<Task> arr = new ArrayList<Task>(); //initialise ArrayList
-
         int position = 0; //Index in the ArrayList
 
         Scanner input = new Scanner(System.in);
