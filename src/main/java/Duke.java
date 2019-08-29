@@ -11,7 +11,6 @@ public class Duke {
         int position = 0; //Index in the ArrayList
 
         Scanner input = new Scanner(System.in);
-
         String statement = input.nextLine(); //read an input
 
         while (!statement.equals("")) {
