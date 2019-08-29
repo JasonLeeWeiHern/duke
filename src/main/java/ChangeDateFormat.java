@@ -17,12 +17,14 @@ public class ChangeDateFormat {
         String yyyy = temp[0];
         String time = temp[1];
 
-        if (dd.equals("1") || dd.equals("21") || dd.equals("31")) {
+        System.out.println(dd);
+
+        if (dd.equals(" 1") || dd.equals(" 21") || dd.equals(" 31")) {
             dd = dd.concat("st");
-        } else if (dd.equals("2") || dd.equals("22")) {
+        } else if (dd.equals(" 2") || dd.equals(" 22")) {
             dd = dd.concat("nd");
-        } else if (dd.equals("3") || dd.equals("23")) {
-            dd = dd.concat("rd");
+        } else if (dd.equals(" 3") || dd.equals(" 23")) {
+            dd = dd.concat(" rd");
         } else {
             dd = dd.concat("th");
         }
