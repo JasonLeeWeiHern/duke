@@ -7,7 +7,7 @@ public class Duke {
         System.out.println("\tWhat can I do for you?");
 
         ArrayList<Task> arr = new ArrayList<Task>(); //initialise ArrayList
-
+        Storage save = new Storage(arr);
         int position = 0; //Index in the ArrayList
 
         Scanner input = new Scanner(System.in);
@@ -55,6 +55,7 @@ public class Duke {
                 int num_to_tick = Integer.parseInt(splitString[1]) - 1; //convert the string to number
                 arr.get(num_to_tick).markasDone();
                 System.out.println("\t  " + arr.get(num_to_tick).getDescription());
+                save.SaveTxtFile(arr);
             }
 
             else if (splitString[0].equals("todo")) {
@@ -63,6 +64,7 @@ public class Duke {
                 }
                 ToDo todo = new ToDo(agenda);
                 arr.add(todo);
+                save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
                 System.out.println("\t  " + todo.getDescription());
                 System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
@@ -81,6 +83,7 @@ public class Duke {
                 }
                 Deadline newDeadline = new Deadline(agenda, time);
                 arr.add(newDeadline);
+                save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
                 System.out.println("\t  " + newDeadline.getDescription());
                 System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
@@ -99,6 +102,7 @@ public class Duke {
                 }
                 Event newEvent = new Event(agenda, time);
                 arr.add(newEvent);
+                save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
                 System.out.println("\t  " + newEvent.getDescription());
                 System.out.println("\tNow you have " + arr.size() + " tasks in the list.");

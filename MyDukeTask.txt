@@ -1,0 +1,3 @@
+T | 0 | [?] fawfawf 
+E | 1 | [?] afwefwa | fawwafw
+D | 0 | [?] fawfwa | fawafaw
