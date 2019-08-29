@@ -1,12 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Duke {
     public static void main(String[] args) {
         System.out.println("\tHello! I'm Duke");
         System.out.println("\tWhat can I do for you?");
+
         ArrayList<Task> arr = new ArrayList<Task>(); //initialise ArrayList
+        Storage save = new Storage(arr);
         int position = 0; //Index in the ArrayList
+
         Scanner input = new Scanner(System.in);
+
         while (true) {
             String statement;
             String[] splitString;
@@ -37,7 +42,6 @@ public class Duke {
                 System.out.println("\tBye. Hope to see you again soon!");
                 break;
             }
-
             else if(statement.equals("list")) {
                 System.out.println("\tHere are the tasks in your list:");
                 for(int i = 0; i < arr.size(); i++) {
@@ -45,39 +49,44 @@ public class Duke {
                     list_number++;
                 }
             }
+
             else if(splitString[0].equals("done")) {
                 System.out.println("\tNice! I've marked this task as done:");
                 int num_to_tick = Integer.parseInt(splitString[1]) - 1; //convert the string to number
                 arr.get(num_to_tick).markasDone();
                 System.out.println("\t  " + arr.get(num_to_tick).getDescription());
+                save.SaveTxtFile(arr);
             }
+
             else if (splitString[0].equals("todo")) {
-                for (int i = 1; i < splitString.length; i++) {
-                    agenda += splitString[i] + " ";
-                }
-                ToDo todo = new ToDo(agenda);
-                arr.add(todo);
-                System.out.println("\tGot it. I've added this task:");
-                System.out.println("\t  " + todo.getDescription());
-                System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
+                    for (int i = 1; i < splitString.length; i++) {
+                        agenda += splitString[i] + " ";
+                    }
+                    ToDo todo = new ToDo(agenda);
+                    arr.add(todo);
+                    save.SaveTxtFile(arr);
+                    System.out.println("\tGot it. I've added this task:");
+                    System.out.println("\t  " + todo.getDescription());
+                    System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
             }
             else if(splitString[0].equals("deadline")) {
-                for (int i = 1; i < splitString.length; i++) {
-                    if (!splitString[i].equals("/by")) {
-                        agenda += splitString[i] + " ";
-                    } else {
-                        while ((i + 1) < splitString.length) {
-                            time += " " + splitString[i + 1];
-                            i += 1;
+                    for (int i = 1; i < splitString.length; i++) {
+                        if (!splitString[i].equals("/by")) {
+                            agenda += splitString[i] + " ";
+                        } else {
+                            while ((i + 1) < splitString.length) {
+                                time += " " + splitString[i + 1];
+                                i += 1;
+                            }
+                            break;
                         }
-                        break;
                     }
-                }
-                Deadline newDeadline = new Deadline(agenda, time);
-                arr.add(newDeadline);
-                System.out.println("\tGot it. I've added this task:");
-                System.out.println("\t  " + newDeadline.getDescription());
-                System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
+                    Deadline newDeadline = new Deadline(agenda, time);
+                    arr.add(newDeadline);
+                    save.SaveTxtFile(arr);
+                    System.out.println("\tGot it. I've added this task:");
+                    System.out.println("\t  " + newDeadline.getDescription());
+                    System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
             }
             else if(splitString[0].equals("event")) {
                 for (int i = 1; i < splitString.length; i++) {
@@ -93,6 +102,7 @@ public class Duke {
                 }
                 Event newEvent = new Event(agenda, time);
                 arr.add(newEvent);
+                save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
                 System.out.println("\t  " + newEvent.getDescription());
                 System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
