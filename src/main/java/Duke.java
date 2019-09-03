@@ -9,6 +9,7 @@ public class Duke {
         System.out.println("\tWhat can I do for you?");
 
         ArrayList<Task> arr = new ArrayList<Task>(); //initialise ArrayList
+
         Storage save = new Storage(arr);
         Storage read = new Storage(arr);
         Scanner input = new Scanner(System.in);
@@ -19,7 +20,7 @@ public class Duke {
             String statement;
             String time = ""; //for the date and time
             String[] splitString;
-//            ChangeDateFormat cdf = new ChangeDateFormat(time);
+            ChangeDateFormat cdf = new ChangeDateFormat(time);
 
             while(true) {
                 statement = input.nextLine(); //read an input
@@ -62,6 +63,15 @@ public class Duke {
                 save.SaveTxtFile(arr);
             }
 
+            else if(splitString[0].equals("delete")) {
+                int to_delete = Integer.parseInt(splitString[1]) - 1;
+                System.out.println("\tNoted. I've removed this task:");
+                System.out.println("\t  " + arr.get(to_delete).getDescription());
+                arr.remove(to_delete);
+                System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
+                save.SaveTxtFile(arr);
+            }
+
             else if (splitString[0].equals("todo")) {
                 for (int i = 1; i < splitString.length; i++) {
                     agenda += splitString[i] + " ";
@@ -85,7 +95,7 @@ public class Duke {
                         break;
                     }
                 }
-                Deadline newDeadline = new Deadline(agenda, time);
+                Deadline newDeadline = new Deadline(agenda, cdf.NewFormat(time));
                 arr.add(newDeadline);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
@@ -104,7 +114,7 @@ public class Duke {
                         break;
                     }
                 }
-                Event newEvent = new Event(agenda, time);
+                Event newEvent = new Event(agenda, cdf.NewFormat(time));
                 arr.add(newEvent);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
