@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,21 +10,19 @@ public class Duke {
 
         ArrayList<Task> arr = new ArrayList<Task>(); //initialise ArrayList
         Storage save = new Storage(arr);
-        int position = 0; //Index in the ArrayList
-
-
-
+        Storage read = new Storage(arr);
         Scanner input = new Scanner(System.in);
+        read.ReadFile(arr);
 
         while (true) {
             String agenda = "";
             String statement;
             String time = ""; //for the date and time
             String[] splitString;
-            ChangeDateFormat cdf = new ChangeDateFormat(time);
+//            ChangeDateFormat cdf = new ChangeDateFormat(time);
+
             while(true) {
                 statement = input.nextLine(); //read an input
-                Task newTask = new Task(statement); //assign the statement to the task
 
                 splitString = statement.split(" ");//split the string into individual words
                 try {
@@ -30,7 +30,7 @@ public class Duke {
                         throw new DukeException("\t☹ OOPS!!! The description of a " + splitString[0] + " cannot be empty.");
                     }
                     else if(!statement.equals("list") && !(splitString[0].equals("done") && splitString.length != 1) && !(statement.equals("bye")) &&
-                            !splitString[0].equals("todo") && !splitString[0].equals("deadline") && !splitString[0].equals("event")) {
+                            !splitString[0].equals("todo") && !splitString[0].equals("deadline") && !splitString[0].equals("event") && !splitString[0].equals("delete") && !splitString[0].equals("find")) {
                         throw new DukeException("\t☹ OOPS!!! I'm sorry, but I don't know what that means :-(");
                     }
                     else {
@@ -85,7 +85,7 @@ public class Duke {
                         break;
                     }
                 }
-                Deadline newDeadline = new Deadline(agenda, cdf.NewFormat(time));
+                Deadline newDeadline = new Deadline(agenda, time);
                 arr.add(newDeadline);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
@@ -104,7 +104,7 @@ public class Duke {
                         break;
                     }
                 }
-                Event newEvent = new Event(agenda, cdf.NewFormat(time));
+                Event newEvent = new Event(agenda, time);
                 arr.add(newEvent);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");

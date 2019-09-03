@@ -12,6 +12,6 @@ public class Event extends Task {
 
     @Override
     public String getFormat() {
-        return "E | " + super.getStatusIcon2() + " | " + super.getDescription() + "|" + at;
+        return "E | " + super.getStatusIcon2() + " | " + super.getOnlyDescription() + "|" + at;
     }
 }

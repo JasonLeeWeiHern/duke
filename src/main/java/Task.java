@@ -21,6 +21,10 @@ public class Task {
         return "[" + getStatusIcon() + "] " + this.description;
     }
 
+    public String getOnlyDescription() {
+        return this.description;
+    }
+
     public String getFormat() {
         return "x";
     }

@@ -1,3 +1,5 @@
-T | 0 | [?] fawfawf 
-E | 1 | [?] afwefwa | fawwafw
-D | 0 | [?] fawfwa | fawafaw
+E | 1 | project seminar | 12th December 2012, 7pm
+E | 1 | project seminar | 12/12/2012 1900
+T | 0 | help jia hui do her birthday party 
+D | 0 | project | 12/3/2019 1800
+E | 0 | birthday party | 12/12/2142 1800
