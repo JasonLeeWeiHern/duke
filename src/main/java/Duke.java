@@ -66,10 +66,12 @@ public class Duke {
                 System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
                 save.SaveTxtFile(arr);
             }
+            //added find function
             else if(splitString[0].equals("find")) {
                 String wordtofind = splitString[1];
                 ArrayList<Integer> contain_index = new ArrayList<Integer>();
                 int list_num = 1;
+                System.out.println("\tHere are the matching tasks in your list:");
                 for(int i = 0; i < arr.size(); i++) {
                     if(arr.get(i).getDescription().contains(wordtofind)) {
                         System.out.println("\t" + list_num + "." + arr.get(i).getDescription());
