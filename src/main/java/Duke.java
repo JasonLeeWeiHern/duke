@@ -9,7 +9,6 @@ public class Duke {
         System.out.println("\tWhat can I do for you?");
 
         ArrayList<Task> arr = new ArrayList<Task>(); //initialise ArrayList
-
         Storage save = new Storage(arr);
         Storage read = new Storage(arr);
         Scanner input = new Scanner(System.in);
