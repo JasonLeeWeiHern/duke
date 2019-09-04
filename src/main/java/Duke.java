@@ -63,6 +63,15 @@ public class Duke {
                 save.SaveTxtFile(arr);
             }
 
+            else if(splitString[0].equals("delete")) {
+                int to_delete = Integer.parseInt(splitString[1]) - 1;
+                System.out.println("\tNoted. I've removed this task:");
+                System.out.println("\t  " + arr.get(to_delete).getDescription());
+                arr.remove(to_delete);
+                System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
+                save.SaveTxtFile(arr);
+            }
+
             else if (splitString[0].equals("todo")) {
                 for (int i = 1; i < splitString.length; i++) {
                     agenda += splitString[i] + " ";
