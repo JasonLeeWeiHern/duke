@@ -1,4 +1,5 @@
-D | 1 | project | 12th March 2019, 6pm
+D | 0 | project | 12th March 2019, 6pm
 E | 0 | birthday party | 12th December 2142, 6pm
-T | 0 | party pooper 
-T | 0 | project life 
+T | 0 | party pooper
+T | 0 | project life
+T | 0 | borrow 
