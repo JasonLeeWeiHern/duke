@@ -15,14 +15,12 @@ public class Duke {
         Scanner input = new Scanner(System.in);
         read.ReadFile(arr);
 
-        int bugger = 0;
-
         while (true) {
             String agenda = "";
             String statement;
             String time = ""; //for the date and time
             String[] splitString;
-            //ChangeDateFormat cdf = new ChangeDateFormat(time);
+            ChangeDateFormat cdf = new ChangeDateFormat(time);
 
             while(true) {
                 statement = input.nextLine(); //read an input
@@ -64,6 +62,7 @@ public class Duke {
                 System.out.println("\t  " + arr.get(num_to_tick).getDescription());
                 save.SaveTxtFile(arr);
             }
+
             else if (splitString[0].equals("todo")) {
                 for (int i = 1; i < splitString.length; i++) {
                     agenda += splitString[i] + " ";
@@ -87,7 +86,7 @@ public class Duke {
                         break;
                     }
                 }
-                Deadline newDeadline = new Deadline(agenda, time);
+                Deadline newDeadline = new Deadline(agenda, cdf.NewFormat(time));
                 arr.add(newDeadline);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
@@ -106,7 +105,7 @@ public class Duke {
                         break;
                     }
                 }
-                Event newEvent = new Event(agenda, time);
+                Event newEvent = new Event(agenda, cdf.NewFormat(time));
                 arr.add(newEvent);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
