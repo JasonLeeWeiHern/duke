@@ -1,1 +1,11 @@
+list
+event birthday party /at 12/12/2142 1800
+deadline project /by 12/3/2019 1800
+event project seminar /at 12/12/2012 1900
+todo help jia hui do her birthday party
+done 1
+done 3
+delete 1
+find party
+event lifescienceparty /at mon 2-4pm
 bye
