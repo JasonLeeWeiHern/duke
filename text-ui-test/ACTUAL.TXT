@@ -1,3 +1,43 @@
 	Hello! I'm Duke
 	What can I do for you?
+	Here are the tasks in your list:
+	1.[E][?] birthday party (at: 12th of December 2142, 6pm)
+	2.[D][?] project (by: 12th of March 2019, 6pm)
+	3.[E][?] project seminar (at: 12th of December 2012, 7pm)
+	4.[T][?] help jia hui do her birthday party
+	5.[T][?] plan for korea trip
+	Got it. I've added this task:
+	  [E][?] training (at: Mon 2-4pm)
+	Now you have 6 tasks in the list.
+	Nice! I've marked this task as done:
+	  [T][?] plan for korea trip
+	Noted. I've removed this task:
+	  [T][?] plan for korea trip
+	Now you have 5 tasks in the list.
+	Got it. I've added this task:
+	  [D][?] assignemnt 5 (by:12th of March 2019, 6pm)
+	Now you have 6 tasks in the list.
+	Here are the tasks in your list:
+	1.[E][?] birthday party (at: 12th of December 2142, 6pm)
+	2.[D][?] project (by: 12th of March 2019, 6pm)
+	3.[E][?] project seminar (at: 12th of December 2012, 7pm)
+	4.[T][?] help jia hui do her birthday party
+	5.[E][?] training (at: Mon 2-4pm)
+	6.[D][?] assignemnt 5 (by:12th of March 2019, 6pm)
+	Here are the matching tasks in your list:
+	1.[D][?] project (by: 12th of March 2019, 6pm)
+	2.[E][?] project seminar (at: 12th of December 2012, 7pm)
+	Here are the matching tasks in your list:
+	1.[T][?] help jia hui do her birthday party
+	☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+	☹ OOPS!!! The description of a todo cannot be empty.
+	Got it. I've added this task:
+	  [T][?] plan for korea trip 
+	Now you have 7 tasks in the list.
+	Noted. I've removed this task:
+	  [D][?] assignemnt 5 (by:12th of March 2019, 6pm)
+	Now you have 6 tasks in the list.
+	Noted. I've removed this task:
+	  [E][?] training (at: Mon 2-4pm)
+	Now you have 5 tasks in the list.
 	Bye. Hope to see you again soon!
