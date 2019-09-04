@@ -15,16 +15,17 @@ public class Duke {
         Scanner input = new Scanner(System.in);
         read.ReadFile(arr);
 
+        int bugger = 0;
+
         while (true) {
             String agenda = "";
             String statement;
             String time = ""; //for the date and time
             String[] splitString;
-            ChangeDateFormat cdf = new ChangeDateFormat(time);
+            //ChangeDateFormat cdf = new ChangeDateFormat(time);
 
             while(true) {
                 statement = input.nextLine(); //read an input
-
                 splitString = statement.split(" ");//split the string into individual words
                 try {
                     if(statement.equals("todo") || statement.equals("deadline") || statement.equals("event")) {
@@ -42,6 +43,7 @@ public class Duke {
                     System.out.println(e.getMessage());
                 }
             }
+
             int list_number = 1;
             if(statement.equals("bye")) {
                 System.out.println("\tBye. Hope to see you again soon!");
@@ -62,28 +64,6 @@ public class Duke {
                 System.out.println("\t  " + arr.get(num_to_tick).getDescription());
                 save.SaveTxtFile(arr);
             }
-
-            else if(splitString[0].equals("delete")) {
-                int to_delete = Integer.parseInt(splitString[1]) - 1;
-                System.out.println("\tNoted. I've removed this task:");
-                System.out.println("\t  " + arr.get(to_delete).getDescription());
-                arr.remove(to_delete);
-                System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
-                save.SaveTxtFile(arr);
-            }
-            
-            else if(splitString[0].equals("find")) {
-                String wordtofind = splitString[1];
-                ArrayList<Integer> contain_index = new ArrayList<Integer>();
-                int list_num = 1;
-                for(int i = 0; i < arr.size(); i++) {
-                    if(arr.get(i).getDescription().contains(wordtofind)) {
-                        System.out.println("\t" + list_num + "." + arr.get(i).getDescription());
-                        list_num++;
-                    }
-                }
-            }
-
             else if (splitString[0].equals("todo")) {
                 for (int i = 1; i < splitString.length; i++) {
                     agenda += splitString[i] + " ";
@@ -107,7 +87,7 @@ public class Duke {
                         break;
                     }
                 }
-                Deadline newDeadline = new Deadline(agenda, cdf.NewFormat(time));
+                Deadline newDeadline = new Deadline(agenda, time);
                 arr.add(newDeadline);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");
@@ -126,7 +106,7 @@ public class Duke {
                         break;
                     }
                 }
-                Event newEvent = new Event(agenda, cdf.NewFormat(time));
+                Event newEvent = new Event(agenda, time);
                 arr.add(newEvent);
                 save.SaveTxtFile(arr);
                 System.out.println("\tGot it. I've added this task:");

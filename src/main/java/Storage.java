@@ -29,25 +29,27 @@ public class Storage {
             br = new BufferedReader(fr);
             while((line = br.readLine()) != null) {
                 String[] splitter = line.split("\\|");
+
                 for(int i = 0; i < splitter.length; i++) {
                     splitter[i] = splitter[i].trim();
                 }
+
                 if(splitter[0].equals("D")) {
                     Deadline newD = new Deadline(splitter[2] + " ", " " + splitter[3]);
-                    if(splitter[1] == "0") {
+                    if(splitter[1] == " 0") {
                         newD.isDone = false;
                     }
-                    else {
+                    else if(splitter[1] == "1") {
                         newD.isDone = true;
                     }
                     arr.add(newD);
                 }
                 else if(splitter[0].equals("E")) {
                     Event newE = new Event(splitter[2] + " ", " " + splitter[3]);
-                    if(splitter[1] == "0") {
+                    if(splitter[1] == " 0") {
                         newE.isDone = false;
                     }
-                    else {
+                    else if(splitter[1] == "1") {
                         newE.isDone = true;
                     }
                     arr.add(newE);
@@ -57,7 +59,7 @@ public class Storage {
                     if(splitter[1] == "0") {
                         newT.isDone = false;
                     }
-                    else {
+                    else if(splitter[1] == "1") {
                         newT.isDone = true;
                     }
                     arr.add(newT);

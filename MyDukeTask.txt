@@ -1,4 +1,1 @@
-T | 1 | help me
-T | 1 | hehe
-T | 1 | what
-T | 0 | hehe lol haha 
+E | 0 | project seminar | 12/12/2012 1900
