@@ -14,7 +14,7 @@ public class Task {
     public String getStatusIcon2() {
         return (isDone ? "1" : "0");
     }
-
+//jejejeje
     public void markasDone() {
         this.isDone = true;
     }
