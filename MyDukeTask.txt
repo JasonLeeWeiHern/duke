@@ -2,4 +2,9 @@ D | 0 | project | 12th March 2019, 6pm
 E | 0 | birthday party | 12th December 2142, 6pm
 T | 0 | party pooper
 T | 0 | project life
-T | 0 | borrow 
+T | 0 | borrow
+T | 0 | borrow books
+E | 0 | project seminar | 12th of December 2012, 7pm
+E | 0 | janel | mon 2-4pm
+E | 0 | dawd |12th of December 2019, 7pm
+D | 0 | faew | Mon 3-5pm LOL

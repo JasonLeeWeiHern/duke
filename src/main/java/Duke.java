@@ -39,7 +39,6 @@ public class Duke {
                     System.out.println(e.getMessage());
                 }
             }
-
             int list_number = 1;
             if(statement.equals("bye")) {
                 System.out.println("\tBye. Hope to see you again soon!");
@@ -52,7 +51,6 @@ public class Duke {
                     list_number++;
                 }
             }
-
             else if(splitString[0].equals("done")) {
                 System.out.println("\tNice! I've marked this task as done:");
                 int num_to_tick = Integer.parseInt(splitString[1]) - 1; //convert the string to number
@@ -60,28 +58,6 @@ public class Duke {
                 System.out.println("\t  " + arr.get(num_to_tick).getDescription());
                 save.SaveTxtFile(arr);
             }
-
-            else if(splitString[0].equals("delete")) {
-                int to_delete = Integer.parseInt(splitString[1]) - 1;
-                System.out.println("\tNoted. I've removed this task:");
-                System.out.println("\t  " + arr.get(to_delete).getDescription());
-                arr.remove(to_delete);
-                System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
-                save.SaveTxtFile(arr);
-            }
-
-            else if(splitString[0].equals("find")) {
-                String wordtofind = splitString[1];
-                ArrayList<Integer> contain_index = new ArrayList<Integer>();
-                int list_num = 1;
-                for (int i = 0; i < arr.size(); i++) {
-                    if (arr.get(i).getDescription().contains(wordtofind)) {
-                        System.out.println("\t" + list_num + "." + arr.get(i).getDescription());
-                        list_num++;
-                    }
-                }
-            }
-
             else if (splitString[0].equals("todo")) {
                 for (int i = 1; i < splitString.length; i++) {
                     agenda += splitString[i] + " ";
