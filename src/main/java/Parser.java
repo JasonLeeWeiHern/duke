@@ -11,18 +11,13 @@ public class Parser {
         this.arr = new ArrayList<Task>();
     }
     public void Parse (ArrayList<Task> arr,TaskList tasklist, Ui ui, Storage storage, ChangeDateFormat cdf) {
-        int list_number = 1;
         String agenda = "";
         String time = "";
         if(ui.statement.equals("bye")) {
             ui.End();
         }
         else if(ui.splitString[0].equals("list")) {
-            System.out.println("\tHere are the tasks in your list:");
-            for(int i = 0; i < arr.size(); i++) {
-                System.out.println("\t" + list_number + "."  + arr.get(i).getDescription());
-                list_number++;
-            }
+            tasklist.List(arr);
         }
         else if(ui.splitString[0].equals("done")) {
             System.out.println("\tNice! I've marked this task as done:");
