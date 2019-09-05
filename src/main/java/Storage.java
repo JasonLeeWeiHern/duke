@@ -2,11 +2,6 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Storage {
-    private ArrayList<Task> arr;
-
-    public Storage(ArrayList<Task> arr) {
-        this.arr = arr;
-    }
 
     public void SaveTxtFile(ArrayList<Task> arr) {
         File file = new File("D:\\duke\\MyDukeTask.txt");
