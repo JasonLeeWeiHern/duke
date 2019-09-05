@@ -6,6 +6,8 @@ public class Duke {
         TaskList tasks  = new TaskList();
         Ui ui= new Ui();
         Parser parse = new Parser(ui);
+        Command command = new Command();
+
         ChangeDateFormat cdf;
         ui.StartUp(); //welcome message
         ArrayList<Task> arr = new ArrayList<Task>();
@@ -14,7 +16,7 @@ public class Duke {
         while(!ui.statement.equals("bye")) {
             ui.Inputcommand();
             cdf = new ChangeDateFormat(ui.statement);
-            parse.Parse(arr, tasks, ui, storage, cdf);
+            parse.Parse(arr, tasks, ui, storage, cdf, command);
         }
     }
 }
