@@ -1,16 +1,6 @@
 import java.util.ArrayList;
 
 public class Parser {
-    protected String statement;
-    protected String[] splitString;
-    protected ArrayList<Task> arr;
-
-    public Parser (Ui ui) {
-        this.statement = ui.statement;
-        this.splitString = ui.splitString;
-        this.arr = new ArrayList<Task>();
-    }
-
     public void Parse (ArrayList<Task> arr,TaskList tasklist, Ui ui, Storage storage, ChangeDateFormat cdf, Command command) {
         String agenda = "";
         String time = "";

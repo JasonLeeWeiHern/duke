@@ -15,7 +15,6 @@ public class Storage {
             System.out.print("ERROR: Not Available");
         }
     }
-
     public void ReadFile(ArrayList<Task> arr) {
         BufferedReader br = null;
         String line;

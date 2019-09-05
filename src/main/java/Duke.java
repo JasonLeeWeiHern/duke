@@ -5,9 +5,8 @@ public class Duke {
         Storage storage = new Storage();
         TaskList tasks  = new TaskList();
         Ui ui= new Ui();
-        Parser parse = new Parser(ui);
+        Parser parse = new Parser();
         Command command = new Command();
-
         ChangeDateFormat cdf;
         ui.StartUp(); //welcome message
         ArrayList<Task> arr = new ArrayList<Task>();

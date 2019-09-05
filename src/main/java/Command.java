@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class Command {
-
     public void ToDoCommand (ArrayList<Task> arr, Ui ui, Storage storage, TaskList tasklist) {
         String agenda = "";
         for (int i = 1; i < ui.splitString.length; i++) {

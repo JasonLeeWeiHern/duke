@@ -8,7 +8,6 @@ public class ChangeDateFormat {
     public ChangeDateFormat (String date) {
         this.date = date;
     }
-
     public String NewFormat(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HHmm");
         Date newDate = new Date();

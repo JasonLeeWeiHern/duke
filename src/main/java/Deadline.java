@@ -1,6 +1,5 @@
 public class Deadline extends Task {
     protected String by;
-
     //cr8ing the deadline constructor
     public Deadline(String description, String by) {
         super(description);

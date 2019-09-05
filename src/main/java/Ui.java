@@ -6,6 +6,7 @@ public class Ui {
     protected String[] splitString;
     protected String statement;
 
+
     public void Inputcommand () {
         Scanner input = new Scanner(System.in);
         while(true) {

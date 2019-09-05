@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class TaskList {
    protected ArrayList<Task> arr;
-
    public void List(ArrayList<Task> arr) {
        System.out.println("\tHere are the tasks in your list:");
        for(int i = 0; i < arr.size(); i++) {
