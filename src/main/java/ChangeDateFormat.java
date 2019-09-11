@@ -5,9 +5,19 @@ import java.util.Date;
 public class ChangeDateFormat {
     private String date;
 
+    /**
+     * Constructor of ChangeDateFormat
+     * @param date the date/timing of the task
+     */
     public ChangeDateFormat (String date) {
         this.date = date;
     }
+
+    /**
+     * This method changes the date format from eg 18/08/1997 1900 to the format in textfile of 18th August 1997 7pm.
+     * @param date date/time of the task
+     * @return the new date in the format of the textfile
+     */
     public String NewFormat(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HHmm");
         Date newDate = new Date();

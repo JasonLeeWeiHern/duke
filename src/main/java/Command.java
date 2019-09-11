@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 
 public class Command {
+    /**
+     * This method calls out the add and save class and print out the format when you input a ToDo command
+     * @param arr List of all the tasks
+     * @param ui get the splitString array that we did in InputCommand();
+     * @param storage Call out the storage class so that can input into the TaskList class as a param.
+     * @param tasklist Call out the TaskList class to add & save the task
+     */
     public void ToDoCommand (ArrayList<Task> arr, Ui ui, Storage storage, TaskList tasklist) {
         String agenda = "";
         for (int i = 1; i < ui.splitString.length; i++) {
@@ -12,6 +19,13 @@ public class Command {
         System.out.println("\t  " + todo.getDescription());
         System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
     }
+    /**
+     * This method calls out the add and save class and print out the format when you input a Deadline command
+     * @param arr List of all the tasks
+     * @param ui get the splitString array that we did in InputCommand();
+     * @param storage
+     * @param tasklist Call out the TaskList class to add & save the task
+     */
     public void DeadlineCommand (ArrayList<Task> arr, Ui ui, Storage storage, TaskList tasklist, ChangeDateFormat cdf) {
         String agenda = "";
         String time = "";
@@ -32,6 +46,13 @@ public class Command {
         System.out.println("\t  " + newDeadline.getDescription());
         System.out.println("\tNow you have " + arr.size() + " tasks in the list.");
     }
+    /**
+     * This method calls out the add and save class and print out the format when you input a Event command
+     * @param arr List of all the tasks
+     * @param ui get the splitString array that we did in InputCommand();
+     * @param storage
+     * @param tasklist Call out the TaskList class to add & save the task
+     */
     public void EventCommand (ArrayList<Task> arr, Ui ui, Storage storage, TaskList tasklist, ChangeDateFormat cdf) {
         String agenda = "";
         String time = "";

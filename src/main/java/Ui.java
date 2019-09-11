@@ -6,7 +6,10 @@ public class Ui {
     protected String[] splitString;
     protected String statement;
 
-
+    /**
+     * Firstly, the method will firstly receive an input(statement). Secondly, the method will check if the input is an empty task or
+     * an incorrect input. If it is, the method will throw a new exception which will print the message according to the error.
+     */
     public void Inputcommand () {
         Scanner input = new Scanner(System.in);
         while(true) {
@@ -26,11 +29,18 @@ public class Ui {
             }
         }
     }
+
+    /**
+     * This method called when the user start up the program.
+     */
     public void StartUp() {
         System.out.println("\tHello! I'm Duke");
         System.out.println("\tWhat can I do for you?");
     }
 
+    /**
+     * This method is called when the user types bye and it will end the program.
+     */
     public void End() {
         System.out.println("\tBye. Hope to see you again soon!");
     }

@@ -3,6 +3,12 @@ import java.util.ArrayList;
 
 public class Storage {
 
+
+    /**
+     * This method writes the content into the Textfile(if not created, it will create a text file) and update it with the textfile
+     * format by using the getFormat() function.
+     * @param arr List of all the tasks
+     */
     public void SaveTxtFile(ArrayList<Task> arr) {
         File file = new File("D:\\duke\\MyDukeTask.txt");
         try {
@@ -15,6 +21,13 @@ public class Storage {
             System.out.print("ERROR: Not Available");
         }
     }
+
+
+    /**
+     * This method will read and extract the task in the textfile and put into the array. Also, it will conver the format back
+     * to the original Intellij list format.
+     * @param arr List of all the task
+     */
     public void ReadFile(ArrayList<Task> arr) {
         BufferedReader br = null;
         String line;

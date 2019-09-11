@@ -1,6 +1,15 @@
 import java.util.ArrayList;
 
 public class Parser {
+    /**
+     * This methods will decipher the command by the user and execute the necessary methods base on the command.
+     * @param arr List of all the task
+     * @param tasklist Calling the class TaskList to...
+     * @param ui Caslling the class UI to ...
+     * @param storage Calling the class Storage to...
+     * @param cdf Calling the class ChangeDateFormat to change the date format to textfile
+     * @param command Calling the class Command to ...
+     */
     public void Parse (ArrayList<Task> arr,TaskList tasklist, Ui ui, Storage storage, ChangeDateFormat cdf, Command command) {
         String agenda = "";
         String time = "";

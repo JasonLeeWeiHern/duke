@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * Main class of Duke project
+ */
+
 public class Duke {
     public static void main(String[] args) {
         Storage storage = new Storage();
