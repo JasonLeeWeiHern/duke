@@ -2,4 +2,5 @@ E | 0 | birthday party | 12th of December 2142, 6pm
 D | 0 | project | 12th of March 2019, 6pm
 E | 0 | project seminar | 12th of December 2012, 7pm
 T | 0 | help jia hui do her birthday party
-T | 0 | plan for korea trip 
+T | 0 | plan for korea trip
+T | 0 | hey 

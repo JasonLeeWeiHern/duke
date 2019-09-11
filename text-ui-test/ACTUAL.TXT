@@ -25,10 +25,10 @@
 	5.[E][?] training (at: Mon 2-4pm)
 	6.[D][?] assignemnt 5 (by:12th of March 2019, 6pm)
 	Here are the matching tasks in your list:
-	1.[D][?] project (by: 12th of March 2019, 6pm)
-	2.[E][?] project seminar (at: 12th of December 2012, 7pm)
+	2.[D][?] project (by: 12th of March 2019, 6pm)
+	3.[E][?] project seminar (at: 12th of December 2012, 7pm)
 	Here are the matching tasks in your list:
-	1.[T][?] help jia hui do her birthday party
+	4.[T][?] help jia hui do her birthday party
 	☹ OOPS!!! I'm sorry, but I don't know what that means :-(
 	☹ OOPS!!! The description of a todo cannot be empty.
 	Got it. I've added this task:

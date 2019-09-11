@@ -10,8 +10,9 @@ public class Ui {
      * Firstly, the method will firstly receive an input(statement). Secondly, the method will check if the input is an empty task or
      * an incorrect input. If it is, the method will throw a new exception which will print the message according to the error.
      */
+    Scanner input = new Scanner(System.in);
     public void Inputcommand () {
-        Scanner input = new Scanner(System.in);
+
         while(true) {
             statement = input.nextLine();
             splitString = statement.split(" ");//split the string into individual words

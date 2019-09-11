@@ -17,7 +17,7 @@ public class Event extends Task {
      */
     @Override
     public String getDescription() {
-        return "[E]" + super.getDescription() + "(at: " + at + ")";
+        return "[E]" + super.getDescription() + "(at:" + at + ")";
     }
 
     /**
@@ -26,6 +26,6 @@ public class Event extends Task {
      */
     @Override
     public String getFormat() {
-        return "E | " + super.getStatusIcon2() + " | " + super.getOnlyDescription() + "| " + at;
+        return "E | " + super.getStatusIcon2() + " | " + super.getOnlyDescription() + "|" + at;
     }
 }
